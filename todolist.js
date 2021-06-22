@@ -1,64 +1,49 @@
-const todoForm = document.querySelector(".js-todolist");
-const todoInput = todoForm.querySelector("Input");
-const todoUl = todoForm.querySelector("ul");
+const todoForm= document.querySelector('.todoForm');
+const todoInput= todoForm.querySelector('input');
+const penUl= document.getElementById('pending');
 
-const TODOS_LS = "currentItems";
-const todoArray=[];
+const PENDING_LS= 'localPen';
+const localpending=[];
+
+function deletePending(event){
+    const li = event.target.parentElement;
+    li.remove();
+}   
 
 
-function saveTodo(){
-     localStorage.setItem(TODOS_LS, JSON.stringify(todoArray));
-}
+function printtodo(text){
+    li = document.createElement('li');
+    delbtn = document.createElement('button');
+    span =document.createElement('span');
 
-
-function printTodos(text){
-    const li = document.createElement("li");
-    const delbtn = document.createElement("button");
-    const span = document.createElement("span");
-    const todoID = Date.now();
-    delbtn.innerHTML = "☹";
-    span.innerHTML= text;
-
- //   delbtn.addEventListener("click", deletlist);
+    delbtn.innerHTML = 'Del';
+    delbtn.addEventListener('click', deletePending);
+    span.innerHTML=text;
+    
 
     li.appendChild(span);
     li.appendChild(delbtn);
 
-    li.id = todoID;
 
-    todoUl.appendChild(li);
+    penUl.appendChild(li);
+            
+    let dataid = new Date();
+    let newID= dataid++;
 
-    const todoObj ={
-        text :text,
-        Id : todoID
+    const liObj={
+        text: text,
+        id: newID
     }
-
-    todoArray.push(todoObj);
-    saveTodo();
+    console.log(liObj);
+   
 }
-
 
 function handleSubmit(event){
     event.preventDefault();
-    const currentValue = todoInput.value;
-    printTodos(currentValue);
-    todoInput.value = "";
+    printtodo(todoInput.value);
+    todoInput.value="";
 }
 
 
-function loadItems(){
-    const toDoItems = localStorage.getItem(TODOS_LS)
-    if ( toDoItems !== null) {
-        const parsedToDos = JSON.parse(toDoItems);
-        parsedToDos.forEach(function(todo){
-        printTodos(todo.text);
-        });
-    } 
-}
 
-function init(){
-    loadItems();
-    todoForm.addEventListener("submit", handleSubmit);
-}
-
-init();
+todoForm.addEventListener('submit', handleSubmit);

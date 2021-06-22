@@ -15,17 +15,22 @@
 
     <h1 class="js-greeting"></h1>
     <form class="js-greetingForm">
-        <input type="text" placeholder="Please put your name😊">
-
+        <input type="text" placeholder="Please put your name😊" required max='15'>
     </form>
 
-
-    <form class="js-todolist">
-        <input type="text" placeholder="Please put your to do list😊" required>
-            <ul>
+    <section id='todolist'>
+        <form class="todoForm">
+            <input type="text" placeholder="Please put your to do list" required>
+        </form>
+        <h3>Pending</h3>
+            <ul id='pending'>
 
             </ul>
-    </form>
+        <h3>Finished</h3>
+            <ul id='finished'>
+
+            </ul>
+    </section> 
 
 </main>
     <script src="clock.js"></script>
