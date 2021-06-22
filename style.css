@@ -1,0 +1,35 @@
+body {
+    background-color:white;
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input{
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px 0px;
+    
+}
+
+input:focus{
+    outline: none;
+}
+
+.js-greetingForm,
+.js-greetingTitle{
+    display: none;
+}
+
+.showing{
+    display: flex;
+}
