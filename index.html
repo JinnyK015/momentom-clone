@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>js practices</title>
-</head>
-<body>
- <main>
-    <section id='clock'>
+  </head>
+  <body>
+    <main>
+      <section id="clock">
         <div class="js-clock">
-            <h1>00:00</h1>
+          <h1>00:00</h1>
         </div>
-    </section>
+      </section>
 
-    <section id='greeting'>
+      <section id="weather">
+        <div class="weather__container">
+            <span></span><br>
+            <span></span>
+        </div>
+      </section>
+
+      <section id="greeting">
         <h1 class="js-greeting"></h1>
         <form class="js-greetingForm">
-            <input type="text" placeholder="Please put your name😊" required max='15'>
+          <input
+            type="text"
+            placeholder="Please put your name😊"
+            required
+            max="15"
+          />
         </form>
-    </section>
+      </section>
 
-    <section id='todolist'>
+      <section id="todolist">
         <form class="todoForm">
-            <input type="text" placeholder="Please put your to do list" required>
+          <input
+            type="text"
+            placeholder="Please put your to do list"
+            required
+          />
         </form>
         <h3>Pending</h3>
-            <ul id='pending'>
-
-            </ul>
+        <ul id="pending"></ul>
         <h3>Finished</h3>
-            <ul id='finished'>
-
-            </ul>
-    </section> 
-
-</main>
-    <script src="clock.js"></script>
-    <script src="todolist.js"></script>
-    <script src="greeting.js"></script>
-    <script src="index.js"></script>
-</body>
+        <ul id="finished"></ul>
+      </section>
+    </main>
+    <script src="js/clock.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
 </html>
