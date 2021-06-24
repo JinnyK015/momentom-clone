@@ -20,7 +20,7 @@ function paintGreeting(text){
     } else if( hour >= 12 && hour <= 17){
         greetingTitle.innerHTML=`Good Afternoon? ${text}`;
     } else{
-        greetingTitle.innerHTML=`Good night? ${text}`;
+        greetingTitle.innerHTML=`Good evening? ${text}`;
     }
     // for 혹은  스위치등으로 5개 연달아서.
     // 굿모닝 디쥬해브 나이스 런치? 굿이브닝 굿나잇 두유해브어 컨설? 
