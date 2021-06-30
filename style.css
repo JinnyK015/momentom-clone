@@ -1,150 +1,145 @@
 body {
-    
-    background-image: linear-gradient(0deg, #e85697 0%, #a574d1 50%, #2B86C5 100%);
-    font-family: 'Roboto Condensed', sans-serif;
-    overflow: none;
-    /* overflow is scroll remove! */
-
+  background-image: linear-gradient(
+    0deg,
+    #e85697 0%,
+    #a574d1 50%,
+    #2b86c5 100%
+  );
+  font-family: "Roboto Condensed", sans-serif;
+  overflow: none;
+  /* overflow is scroll remove! */
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
 
-ul{
+ul {
   padding-inline-start: 1rem;
 }
 
 /* clock */
-#clock{
-    margin-top: 1rem;
+#clock {
+  margin-top: 1rem;
 }
-.js-clock h1{
-    font-size: 60px;
-    margin:0;
+.js-clock h1 {
+  font-size: 60px;
+  margin: 0;
 }
 
 /* weather */
-.weather__container{
-    text-align: center;
+.weather__container {
+  text-align: center;
 }
-.weather__container span:last-child{
-  
-    font-size: 24px;
+.weather__container span:last-child {
+  font-size: 24px;
 }
-
 
 /* Greeting */
-#greeting{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.js-greeting{
-    font-size: 40px;
-    margin: 0;
+.js-greeting {
+  font-size: 40px;
+  margin: 0;
 }
 
-.js-greetingForm input{
-    background-color:transparent;
-    border:none;
-    border-bottom: 2px solid black;
-    font-size: 30px;
-    box-sizing: 50px;
-    padding: 5px 10px;
-    margin: 10px 0px;
-    
+.js-greetingForm input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 30px;
+  box-sizing: 50px;
+  padding: 5px 10px;
+  margin: 10px 0px;
 }
 
 .js-greetingForm,
-.js-greetingTitle{
-    display: none;
-    
+.js-greetingTitle {
+  display: none;
 }
 
-.showing{
-    display: flex;
-    font-size: 40px;
-    margin: 0;
+.showing {
+  display: flex;
+  font-size: 40px;
+  margin: 0;
 }
 
 /* Todolist */
 
-#todolist{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#todolist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.todoForm input{
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-
+.todoForm input {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
 }
-.todoForm input::placeholder{
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-}
-
-.todolist__container{
-    display: flex;
-    margin: auto;
-
+.todoForm input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
-.todolist__contents{
-    background-color:rgba(0, 0, 0, 0.3);
-    padding: 5px 20px;
-    margin: 0 10px;
-}
-.todo__item{
-    display: flex;
-    justify-content:space-between
+.todolist__container {
+  display: flex;
+  margin: auto;
 }
 
-.todo__item span{
- margin-right: 0.3rem;
+.todolist__contents {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 20px;
+  margin: 0 10px;
+}
+.todo__item {
+  display: flex;
+  justify-content: space-between;
 }
 
-.todo__item button{
-   border: none;
-   background-color:rgba(255, 255, 255, 0.2);
-   padding:0 0.2rem;
-   margin: 0 0.2rem;
+.todo__item span {
+  margin-right: 0.3rem;
+}
+
+.todo__item button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0 0.2rem;
+  margin: 0 0.2rem;
 }
 
 @media screen and (max-width: 500px) {
-    body{
-        overflow: auto;
-    }
-    .js-greeting{
-        text-align: center;
-    }
-    .js-greeting span{
-        display: block;
-        font-size: 32px;
-    }
+  body {
+    overflow: auto;
+  }
+  .js-greeting {
+    text-align: center;
+  }
+  .js-greeting span {
+    display: block;
+    font-size: 32px;
+  }
 
-    .todolist__container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .todolist__contents{
-        margin-bottom: 1rem;
-    }
-
+  .todolist__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .todolist__contents {
+    margin-bottom: 1rem;
+  }
 }
