@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
     <title>js practices</title>
   </head>
   <body>
@@ -20,20 +23,15 @@
 
       <section id="weather">
         <div class="weather__container">
-            <span></span><br>
-            <span></span>
+          <span></span><br />
+          <span></span>
         </div>
       </section>
 
       <section id="greeting">
-        <h1 class="js-greeting">Hello? what's your name?</h1>
+        <h1 class="js-greeting">Hello?<span> What's your name?</span></h1>
         <form class="js-greetingForm">
-          <input
-            type="text"
-            size="10"
-            required
-            max="15"
-          />
+          <input type="text" size="10" required max="15" />
         </form>
       </section>
 
@@ -48,19 +46,15 @@
         <div class="todolist__container">
           <div class="todolist__contents">
             <h3>Pending</h3>
-            <ul id="pending"></ul>
+            <ul id="pending" class="todolist-items"></ul>
           </div>
           <div class="todolist__contents">
             <h3>Finished</h3>
-            <ul id="finished"></ul>
+            <ul id="finished" class="todolist-items"></ul>
           </div>
-
         </div>
       </section>
-
-
     </main>
-
 
     <script src="js/clock.js"></script>
     <script src="js/todolist.js"></script>

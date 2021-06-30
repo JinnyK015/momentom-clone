@@ -2,6 +2,8 @@ body {
     
     background-image: linear-gradient(0deg, #e85697 0%, #a574d1 50%, #2B86C5 100%);
     font-family: 'Roboto Condensed', sans-serif;
+    overflow: none;
+    /* overflow is scroll remove! */
 
 }
 
@@ -18,7 +20,14 @@ input:focus{
     outline: none;
 }
 
+ul{
+  padding-inline-start: 1rem;
+}
+
 /* clock */
+#clock{
+    margin-top: 1rem;
+}
 .js-clock h1{
     font-size: 60px;
     margin:0;
@@ -100,4 +109,42 @@ input:focus{
     background-color:rgba(0, 0, 0, 0.3);
     padding: 5px 20px;
     margin: 0 10px;
+}
+.todo__item{
+    display: flex;
+    justify-content:space-between
+}
+
+.todo__item span{
+ margin-right: 0.3rem;
+}
+
+.todo__item button{
+   border: none;
+   background-color:rgba(255, 255, 255, 0.2);
+   padding:0 0.2rem;
+   margin: 0 0.2rem;
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        overflow: auto;
+    }
+    .js-greeting{
+        text-align: center;
+    }
+    .js-greeting span{
+        display: block;
+        font-size: 32px;
+    }
+
+    .todolist__container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .todolist__contents{
+        margin-bottom: 1rem;
+    }
+
 }

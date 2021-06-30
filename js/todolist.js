@@ -17,21 +17,24 @@ function saveFinished(){
 }
 
 function deletePending(event){
-    const li = event.target.parentElement;
+    const div = event.target.parentElement;
+    const li = div.parentElement;
     li.remove();
     pendingItem = pendingItem.filter((toDo) => toDo.id !== parseInt(li.id));
     savePending();
 }   
 
 function deleteFinished(event){
-    const li = event.target.parentElement;
+    const div = event.target.parentElement;
+    const li = div.parentElement;
     li.remove();
     finishedItem = finishedItem.filter((toDo) => toDo.id !== parseInt(li.id));
     saveFinished();
 }   
 
 function moveFinished(event){
-    const li = event.target.parentElement;
+    const div = event.target.parentElement;
+    const li = div.parentElement;
  
     const liObj={
         text:li.querySelector("span").innerHTML,
@@ -48,8 +51,10 @@ function moveFinished(event){
 }
 
 function movePending(event){
-    const li = event.target.parentElement;
- 
+    const div = event.target.parentElement;
+    const li = div.parentElement;
+  
+
     const liObj={
         text:li.querySelector("span").innerHTML,
         id: Date.now()
@@ -70,6 +75,7 @@ function printFin(newItem){
     li = document.createElement('li');
     li.id =newItem.id;
 
+    btnBox = document.createElement('div');
     penbtn = document.createElement('button');
     penbtn.innerHTML = 'Undo';
     penbtn.addEventListener('click', movePending);
@@ -83,9 +89,13 @@ function printFin(newItem){
 
     span.innerHTML=newItem.text;
 
+    btnBox.appendChild(penbtn);
+    btnBox.appendChild(delbtn);
+
     li.appendChild(span);
-    li.appendChild(penbtn);
-    li.appendChild(delbtn);
+    li.appendChild(btnBox)
+    
+    li.classList.add('todo__item');
 
     finUl.appendChild(li);
 }
@@ -95,6 +105,8 @@ function printFin(newItem){
 function printPen(newItem){
     li = document.createElement('li');
     li.id =newItem.id;
+
+    btnBox = document.createElement('div');
 
     finbtn = document.createElement('button');
     finbtn.innerHTML = 'Done';
@@ -109,9 +121,13 @@ function printPen(newItem){
 
     span.innerHTML=newItem.text;
 
+    btnBox.appendChild(finbtn);
+    btnBox.appendChild(delbtn);
+
     li.appendChild(span);
-    li.appendChild(finbtn);
-    li.appendChild(delbtn);
+    li.appendChild(btnBox);
+  
+    li.classList.add('todo__item');
 
     penUl.appendChild(li);
 }
