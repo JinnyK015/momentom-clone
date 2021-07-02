@@ -16,6 +16,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 16px;
 }
 
 input:focus {
@@ -24,6 +25,37 @@ input:focus {
 
 ul {
   padding-inline-start: 1rem;
+}
+
+/* cog */
+#navbar {
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+}
+
+#navbar i {
+  font-size: 2em;
+  margin: 0.4em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#navbar i:hover {
+  animation: spin 2s ease-in-out forwards;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 
 /* clock */
